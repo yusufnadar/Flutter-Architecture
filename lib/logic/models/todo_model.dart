@@ -18,8 +18,8 @@ class TodoModel {
     this.completed,
   });
 
-  int? userId;
-  int? id;
+  String? userId;
+  String? id;
   String? title;
   bool? completed;
 

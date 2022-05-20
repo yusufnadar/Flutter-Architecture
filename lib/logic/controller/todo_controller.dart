@@ -1,6 +1,6 @@
 import 'package:flutter_clean_project/constants/api.dart';
 import 'package:flutter_clean_project/logic/base/method.dart';
-import 'package:flutter_clean_project/logic/controller/base_controller.dart';
+import 'package:flutter_clean_project/logic/base/controller.dart';
 import 'package:flutter_clean_project/logic/models/todo_model.dart';
 import 'package:get/get.dart';
 

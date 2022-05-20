@@ -13,7 +13,6 @@ class Themes {
       iconTheme: IconThemeData(color: whiteColor),
     ),
     fontFamily: fontName,
-    primarySwatch: kPrimaryColor,
     scaffoldBackgroundColor: whiteColor,
   );
 }

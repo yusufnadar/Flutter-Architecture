@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clean_project/constants/theme/theme.dart';
 import 'package:get/get.dart';
 
-class DatePickButton extends StatelessWidget {
+class CustomChooseDateButton extends StatelessWidget {
   final String? title;
   final ValueChanged<DateTime>? onDateTimeChanged;
 
-  const DatePickButton({Key? key, this.title, this.onDateTimeChanged})
+  const CustomChooseDateButton({Key? key, this.title, this.onDateTimeChanged})
       : super(key: key);
 
   @override

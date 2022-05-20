@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_project/logic/controller/todo_controller.dart';
 import 'package:flutter_clean_project/logic/models/todo_model.dart';
-import 'package:flutter_clean_project/ui/widgets/common/custom/custom_button.dart';
+import 'package:flutter_clean_project/ui/widgets/custom/custom_button.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/helpers/sized_box.dart';
@@ -20,7 +20,7 @@ class TodoPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomButton(
-              title: 'Index',
+              text: 'Index',
               onTap: () => todoController.index(),
             ),
             GetBuilder<TodoController>(
@@ -35,28 +35,29 @@ class TodoPage extends StatelessWidget {
             ),
             sizedBox3,
             CustomButton(
-              title: 'Store',
+              text: 'Store',
               onTap: () {
-                var todo =
-                    TodoModel(userId: 1, title: 'Başlık', completed: true);
+                var todo = TodoModel(
+                    userId: '1', title: 'Başlık', completed: true, id: '101');
                 todoController.store(todo).then((value) => print(value));
               },
             ),
             sizedBox3,
             CustomButton(
-                title: 'Update',
+                text: 'Update',
                 onTap: () {
-                  var todo =
-                      TodoModel(userId: 1, title: 'Başlık', completed: true);
-                  todoController
-                      .upToDate(todo, 3)
-                      .then((value) => print(value));
+                  var todo = TodoModel(
+                      userId: '', title: 'Başlık', completed: true, id: '10');
+                  todoController.upToDate(todo, 3).then(
+                        (value) => print(value),
+                      );
                 }),
             sizedBox3,
             CustomButton(
-              title: 'Delete',
-              onTap: () =>
-                  todoController.delete(3).then((value) => print(value)),
+              text: 'Delete',
+              onTap: () => todoController.delete(3).then(
+                    (value) => print(value),
+                  ),
             ),
           ],
         ),

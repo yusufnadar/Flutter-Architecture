@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_clean_project/constants/api.dart';
 import 'package:flutter_clean_project/logic/base/http_exception.dart';
 import 'package:http/http.dart' as http;
@@ -22,13 +24,15 @@ class Method {
     return this;
   }
 
-  Future method(methodName) async {
+  Future method(methodName, {token}) async {
     Map<Symbol, dynamic> list = {};
-    //list = {const Symbol('headers'): {'Content-Type':'application/json','Authorization':'Bearer $appToken'}};
+    list = {const Symbol('headers'): {'Content-Type':'application/json','Authorization':'Bearer $token'}};
     if (_body != null) {
-      list.addAll({const Symbol('body'): _body});
+      list.addAll({const Symbol('body'): json.encode(_body)});
     }
-    return HttpException.handleException(Function.apply(
-        _methods[methodName]!, [Uri.parse(baseUrl + _endPoint!)], list));
+    return HttpException.handleException(
+      Function.apply(
+          _methods[methodName]!, [Uri.parse(baseUrl + _endPoint!)], list),
+    );
   }
 }

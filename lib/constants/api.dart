@@ -1,17 +1,10 @@
-
-
 // ignore: constant_identifier_names
-const baseUrl = 'https://jsonplaceholder.typicode.com/';
+const baseUrl = 'https://yusufnadar.com/api';
 class EndPoints {
   static const todos = 'todos';
-}
-
-class Keys {
-  static const m2mId = '939ea300-9fe6-40ff-bbc8-5cd75e81da7f';
-  static const m2mKey = '2qMVdyzH8EdYIQNpihL0J35qFVEmEgDuGes2hPze';
-
-  static const u2mId = '959b3030-9da2-4b2d-ac6d-03038aa58286';
-  static const u2mKey = 'ilMvT2b8HJsxDcU1kieq6XWC95dvqKyFxdThc5qf';
+  static const login = '/auth/login';
+  static const register = '/auth/register';
+  static const getUser = '/user/get';
 }
 
 class Status {

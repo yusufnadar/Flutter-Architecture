@@ -1,25 +1,13 @@
 import 'package:flutter/material.dart';
 
-var primaryColor =  const Color(0xffFF5D47);
-var secondColor =  const Color(0xff123456);
-var whiteColor =  const Color(0xffffffff);
-var blackColor =  const Color(0xff000000);
-var purpleColor =  const Color(0xffb700ff);
+const primaryColor =  Color(0xffFF5D47);
+const secondColor =  Color(0xff123456);
+const whiteColor =  Color(0xffffffff);
+const blackColor =  Color(0xff000000);
+const purpleColor =  Color(0xffb700ff);
+const lightGrayColor = Color(0xffeceff1);
+const grayColor = Color(0xff607d8b);
+const warningColor = Color(0xffFFCC00);
+const successColor = Color(0xff42ba96);
+const errorColor = Color(0xffff0033);
 
-var primaryColor2 =0xffFF5D47;
-
-MaterialColor kPrimaryColor =  MaterialColor(
-   primaryColor2,
-   <int, Color>{
-      50: primaryColor,
-      100: primaryColor,
-      200: primaryColor,
-      300: primaryColor,
-      400: primaryColor,
-      500: primaryColor,
-      600: primaryColor,
-      700: primaryColor,
-      800: primaryColor,
-      900: primaryColor,
-   },
-);

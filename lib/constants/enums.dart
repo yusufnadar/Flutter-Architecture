@@ -1,2 +1,3 @@
-enum Gender { male, female }
-enum TokenTypes { m2m, u2m }
+// ignore_for_file: constant_identifier_names
+
+enum TabItem { HOME, PROFILE }
